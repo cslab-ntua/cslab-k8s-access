@@ -8,7 +8,7 @@ This guide explains how to connect to the CSLAB infrastructure through VPN, inst
 
 You will also receive an email containing two configuration files and a username for accessing the infrastructure. In the instructions below, whenever you see **`<username>`**, replace it with the username you received by email.
 
-The course material is available in the following repository:
+The material is available in the following repository:
 
 https://github.com/cslab-ntua/cslab-k8s-access
 
