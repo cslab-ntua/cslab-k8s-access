@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-This guide explains how to connect to the CSLAB  infrastructure through VPN, install the required tools, set up your local working environment, and run Kubernetes (k8s) tasks.
+This guide explains how to connect to the CSLAB infrastructure through VPN, install the required tools, set up your local working environment, and run Kubernetes (k8s) tasks.
 
 [Kubernetes (K8s)](https://kubernetes.io/) is an open-source platform for managing containerized applications at scale. It helps automate deployment, management, and scaling of applications.
 
@@ -10,7 +10,7 @@ You will also receive an email containing two configuration files and a username
 
 The course material is available in the following repository:
 
-https://github.com/ikons/cslab-k8s-access
+https://github.com/cslab-ntua/cslab-k8s-access
 
 You can clone it locally with:
 
@@ -127,13 +127,15 @@ d
 
 A **manifest** is a YAML file that describes Kubernetes resources. You can create and apply these files using `kubectl apply`.
 
-Go to the example directory:
+Go to the repository directory:
 
 ```bash
-cd ~/cloud-uth/code/03_manifest
+cd ~/cslab-k8s-access
 ```
 
-### Example Pod Manifest
+The example Pod manifest is available at `manifest/nginx-pod.yaml`.
+
+### Example Pod Manifest (`manifest/nginx-pod.yaml`)
 
 ```yaml
 apiVersion: v1
@@ -151,7 +153,7 @@ spec:
 To create the Pod shown above:
 
 ```bash
-kubectl apply -f nginx-pod.yaml
+kubectl apply -f manifest/nginx-pod.yaml
 ```
 
 To verify that the Pod was created successfully:
@@ -179,5 +181,5 @@ Once you have confirmed that the nginx Pod is running correctly and serving the 
 
 ```bash
 # Delete the Pod
-kubectl delete -f nginx-pod.yaml
+kubectl delete -f manifest/nginx-pod.yaml
 ```
